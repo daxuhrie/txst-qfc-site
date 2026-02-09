@@ -1,0 +1,21 @@
+name: Playwright visual tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npm run build
+      - run: nohup npm run start &
+      - run: npx wait-on http://localhost:3000
+      - run: npx playwright test --reporter=list

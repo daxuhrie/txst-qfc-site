@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 247, 250;
+  --background-end-rgb: 255, 255, 255;
+  --primary-rgb: 13, 71, 161; /* blue-700 */
+  --card-radius: 0.5rem; /* 8px */
+  --card-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  /* primary updated to a richer blue for brand polish */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  font-size: 18px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: rgb(var(--primary-rgb));
+  transition: color .12s ease;
+}
+
+button,
+a:not(.no-btn) {
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+button:hover,
+a:not(.no-btn):hover {
+  transform: translateY(-2px);
+}
+
+:where(:focus-visible) {
+  outline: 2px solid rgba(var(--primary-rgb), 0.14);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.08);
+}
+
+@layer components {
+  .site-section {
+    @apply py-12 md:py-20;
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)));
+  }
+
+  .card {
+    background-color: white;
+    border: 1px solid rgb(229,231,235);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    transition: box-shadow .18s ease, transform .12s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center px-4 py-2 min-h-[44px] text-white text-sm font-medium rounded-md hover:bg-primary-700 transition-colors;
+    background-color: rgb(var(--primary-rgb));
+  }
+}
