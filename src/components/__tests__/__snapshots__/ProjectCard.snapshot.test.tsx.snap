@@ -30,7 +30,7 @@ exports[`ProjectCard snapshots (responsive widths) renders correctly at 320px 1`
       class="flex flex-wrap gap-2 mb-4"
     >
       <span
-        class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full"
+        class="px-2 py-1 text-xs bg-gray-50 text-gray-600 rounded-full border border-gray-100"
       >
         Test
       </span>
@@ -112,7 +112,7 @@ exports[`ProjectCard snapshots (responsive widths) renders correctly at 768px 1`
       class="flex flex-wrap gap-2 mb-4"
     >
       <span
-        class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full"
+        class="px-2 py-1 text-xs bg-gray-50 text-gray-600 rounded-full border border-gray-100"
       >
         Test
       </span>
@@ -194,7 +194,7 @@ exports[`ProjectCard snapshots (responsive widths) renders correctly at 1200px 1
       class="flex flex-wrap gap-2 mb-4"
     >
       <span
-        class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full"
+        class="px-2 py-1 text-xs bg-gray-50 text-gray-600 rounded-full border border-gray-100"
       >
         Test
       </span>

@@ -21,18 +21,20 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ count = 3 }) => {
                         Discover projects developed by our members; external links open in a new tab.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 mb-8">
-                    {featuredProjects.map((project) => (
-                        <ProjectCard key={project.id} {...project} />
-                    ))}
-                </div>
-                <div className="text-center">
-                    <Link
-                        href="/projects"
-                        className="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
-                    >
-                        View All Projects
-                    </Link>
+                <div className="section-panel">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8">
+                        {featuredProjects.map((project) => (
+                            <ProjectCard key={project.id} {...project} />
+                        ))}
+                    </div>
+                    <div className="text-center">
+                        <Link
+                            href="/projects"
+                            className="btn-primary bg-primary-600 hover:bg-primary-700"
+                        >
+                            View All Projects
+                        </Link>
+                    </div>
                 </div>
             </Container>
         </section>

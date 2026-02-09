@@ -8,7 +8,7 @@ const About: React.FC = () => {
                 <div className="text-center mb-8 md:mb-12">
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">About the Club</h2>
                 </div>
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-4xl mx-auto section-panel">
                     <p className="text-lg text-gray-700 mb-6">
                         Quant Finance Collective at Texas State University is a student-led quantitative finance education organization dedicated to developing foundational and advanced market understanding through mathematics, programming, and data-driven analysis.
                     </p>
