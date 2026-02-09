@@ -21,10 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <a href="#content" className="skip-link">Skip to content</a>
         <Navigation />
-        {children}
+        <main id="content">{children}</main>
         <Footer />
-      </body>
+      </body> 
     </html>
   )
 }

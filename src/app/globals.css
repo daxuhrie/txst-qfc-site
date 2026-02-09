@@ -82,6 +82,32 @@ a:not(.no-btn):hover {
     border: 1px solid rgba(15,23,42,0.04);
   }
 
+  /* accessible skip link */
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: 0.75rem;
+    background: rgba(15,23,42,0.95);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transform: translateY(-120%);
+    transition: transform .12s ease, opacity .12s ease;
+    z-index: 60;
+  }
+  .skip-link:focus {
+    transform: translateY(0%);
+    outline: none;
+    box-shadow: 0 6px 20px rgba(2,6,23,0.18);
+  }
+
+  /* slightly stronger focus ring for interactive elements */
+  :where(:focus-visible) {
+    outline: 3px solid rgba(var(--primary-rgb), 0.18);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(var(--primary-rgb), 0.06);
+  }
+
   .card {
     background-color: white;
     border: 1px solid rgba(15,23,42,0.06);

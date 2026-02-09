@@ -5,13 +5,13 @@ exports[`ProjectCard snapshots (responsive widths) renders correctly at 320px 1`
   style="width: 320px;"
 >
   <div
-    class="card p-4 md:p-6 h-full flex flex-col transition-shadow hover:shadow-md"
+    class="card p-4 md:p-6 lg:p-8 h-full flex flex-col transition-shadow hover:shadow-md"
   >
     <div
-      class="flex flex-col sm:flex-row justify-between items-start mb-4"
+      class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4"
     >
       <h3
-        class="text-lg md:text-xl font-semibold text-gray-900 break-words"
+        class="text-lg md:text-xl font-semibold text-gray-900 break-words leading-snug"
       >
         Test Project
       </h3>
@@ -87,13 +87,13 @@ exports[`ProjectCard snapshots (responsive widths) renders correctly at 768px 1`
   style="width: 768px;"
 >
   <div
-    class="card p-4 md:p-6 h-full flex flex-col transition-shadow hover:shadow-md"
+    class="card p-4 md:p-6 lg:p-8 h-full flex flex-col transition-shadow hover:shadow-md"
   >
     <div
-      class="flex flex-col sm:flex-row justify-between items-start mb-4"
+      class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4"
     >
       <h3
-        class="text-lg md:text-xl font-semibold text-gray-900 break-words"
+        class="text-lg md:text-xl font-semibold text-gray-900 break-words leading-snug"
       >
         Test Project
       </h3>
@@ -169,13 +169,13 @@ exports[`ProjectCard snapshots (responsive widths) renders correctly at 1200px 1
   style="width: 1200px;"
 >
   <div
-    class="card p-4 md:p-6 h-full flex flex-col transition-shadow hover:shadow-md"
+    class="card p-4 md:p-6 lg:p-8 h-full flex flex-col transition-shadow hover:shadow-md"
   >
     <div
-      class="flex flex-col sm:flex-row justify-between items-start mb-4"
+      class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4"
     >
       <h3
-        class="text-lg md:text-xl font-semibold text-gray-900 break-words"
+        class="text-lg md:text-xl font-semibold text-gray-900 break-words leading-snug"
       >
         Test Project
       </h3>
