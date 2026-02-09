@@ -135,4 +135,22 @@ a:not(.no-btn):hover {
     border-radius: calc(var(--card-radius) + 4px);
     box-shadow: 0 20px 60px rgba(2,6,23,0.12);
   }
+
+  /* prevent text overflow while avoiding excessive single-letter wrapping */
+  p, li, h1, h2, h3, h4, a {
+    /* prefer breaking at word boundaries; 'anywhere' covers long words but avoids aggressive letter breaks */
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  /* enforce reasonable tracking for headings to avoid extremely tight negative letter-spacing */
+  h1, h2, h3, h4 {
+    letter-spacing: -0.01em !important;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
 }
