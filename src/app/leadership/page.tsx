@@ -62,7 +62,7 @@ function LeaderModal({ leaders, index, onClose, onPrev, onNext }: { leaders: any
                     <X className="w-5 h-5" />
                 </button>
 
-                <div className="flex items-center gap-6 p-8">
+                <div className="flex items-stretch gap-6 p-8">
                     <div className="w-1/2 flex items-center justify-center">
                         <div className="relative w-full max-w-xs aspect-[4/5]">
                             <Image
@@ -76,7 +76,7 @@ function LeaderModal({ leaders, index, onClose, onPrev, onNext }: { leaders: any
                         </div>
                     </div>
 
-                    <div className="w-1/2">
+                    <div className="w-1/2 flex flex-col h-full">
                         <h2 className="text-2xl font-semibold">{leader.name}</h2>
                         <p className="text-sm text-primary-700 mt-1">{leader.role}</p>
                         {(leader.major || leader.interest) && (
@@ -85,33 +85,35 @@ function LeaderModal({ leaders, index, onClose, onPrev, onNext }: { leaders: any
 
                         <p className="mt-4 text-sm text-slate-300">{leader.bio}</p>
 
-                        <div className="mt-6 flex items-center gap-4">
-                            {leader.linkedin && (
-                                <a href={leader.linkedin} target="_blank" rel="noreferrer" aria-label={`${leader.name} LinkedIn`} className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-primary-700">
-                                    <Linkedin className="w-5 h-5" /> LinkedIn
-                                </a>
-                            )}
+                        <div className="mt-6 flex flex-col gap-4 h-full">
+                            <div className="flex-1">
+                                {leader.linkedin && (
+                                    <a href={leader.linkedin} target="_blank" rel="noreferrer" aria-label={`${leader.name} LinkedIn`} className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-primary-700">
+                                        <Linkedin className="w-5 h-5" /> LinkedIn
+                                    </a>
+                                )}
 
-                            {leader.email && (
-                                <a href={`mailto:${leader.email}`} aria-label={`Email ${leader.name}`} className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-primary-700">
-                                    <Mail className="w-5 h-5" /> Email
-                                </a>
-                            )}
-                        </div>
+                                {leader.email && (
+                                    <a href={`mailto:${leader.email}`} aria-label={`Email ${leader.name}`} className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-primary-700">
+                                        <Mail className="w-5 h-5" /> Email
+                                    </a>
+                                )}
+                            </div>
 
-                        <div className="mt-6 flex items-center gap-3">
-                            <button onClick={onPrev} aria-label="Previous" className="p-2 rounded-full bg-white/5 hover:bg-white/10">
-                                <ChevronLeft className="w-5 h-5" />
-                            </button>
-                            <button onClick={onNext} aria-label="Next" className="p-2 rounded-full bg-white/5 hover:bg-white/10">
-                                <ChevronRight className="w-5 h-5" />
-                            </button>
-                        </div>
+                            <div className="flex items-center gap-3 mt-auto">
+                                <button onClick={onPrev} aria-label="Previous" className="p-2 rounded-full bg-white/5 hover:bg-white/10">
+                                    <ChevronLeft className="w-5 h-5" />
+                                </button>
+                                <button onClick={onNext} aria-label="Next" className="p-2 rounded-full bg-white/5 hover:bg-white/10">
+                                    <ChevronRight className="w-5 h-5" />
+                                </button>
+                            </div>
 
-                        <div className="mt-6 flex items-center gap-2">
-                            {leaders.map((_, i) => (
-                                <span key={i} className={`h-2 w-2 rounded-full ${i === index ? 'bg-white' : 'bg-white/30'}`} />
-                            ))}
+                            <div className="flex items-center gap-2">
+                                {leaders.map((_, i) => (
+                                    <span key={i} className={`h-2 w-2 rounded-full ${i === index ? 'bg-white' : 'bg-white/30'}`} />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
