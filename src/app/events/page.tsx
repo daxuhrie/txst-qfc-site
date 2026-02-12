@@ -67,7 +67,7 @@ export default function EventsPage() {
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
                         <div>
                             <p className="text-xs uppercase tracking-[0.08em] text-slate-500">Spring semester calendar</p>
-                            <h2 id="topic-roadmap" className="text-xl font-semibold text-slate-900">Topic roadmap</h2>
+                            <h2 id="topic-roadmap" className="text-xl font-semibold text-slate-900">Topic Roadmap</h2>
                         </div>
                         <p className="text-sm text-slate-600">Subject to refinement as we add speakers and new simulations.</p>
                     </div>
