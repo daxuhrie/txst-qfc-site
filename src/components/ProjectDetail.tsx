@@ -53,21 +53,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
                             <p className="mt-2 text-sm muted">Developed and maintained independently by {ownerName}</p>
                         </div>
                         <div className="flex items-center gap-3">
-                                <StatusBadge status={status} />
-                                {status === 'Under Development' ? (
-                                    <div className="inline-flex items-center px-4 py-2 min-h-[44px] bg-slate-200 text-gray-700 rounded-md text-sm font-medium cursor-not-allowed opacity-90">
-                                        Under Development
-                                    </div>
-                                ) : (
-                                    <a
-                                        href={externalUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center px-4 py-2 min-h-[44px] bg-primary-600 text-white rounded-md text-sm font-medium hover:bg-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
-                                    >
-                                        Visit External Site
-                                    </a>
-                                )}
+                            <StatusBadge status={status} />
+                            {status === 'Under Development' ? (
+                                <div className="inline-flex items-center px-4 py-2 min-h-[44px] bg-slate-200 text-gray-700 rounded-md text-sm font-medium cursor-not-allowed opacity-90">
+                                    Under Development
+                                </div>
+                            ) : (
+                                <a
+                                    href={externalUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center px-4 py-2 min-h-[44px] bg-primary-600 text-white rounded-md text-sm font-medium hover:bg-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
+                                >
+                                    Visit External Site
+                                </a>
+                            )}
                         </div>
                     </div>
                 </header>
@@ -104,9 +104,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
                     </ul>
                 </section>
 
-        <aside role="note" className="mt-8 p-4 border-l-4 border-gray-300 bg-gray-50 rounded-md">
+                <aside role="note" className="mt-8 p-4 border-l-4 border-gray-300 bg-gray-50 rounded-md">
                     <p className="text-sm text-gray-700">
-            <strong>Independence notice:</strong> {title} is an independent educational project developed and maintained by its author. It is listed here as an external resource and is not owned or operated by the Quant Finance Collective at Texas State University.
+                        <strong>Independence notice:</strong> {title} is an independent educational project developed and maintained by its author. It is listed here as an external resource and is not owned or operated by the Quant Finance Collective at Texas State University.
                     </p>
                 </aside>
             </div>
