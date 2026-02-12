@@ -13,21 +13,21 @@ const phases: Phase[] = [
         label: 'Phase 1',
         title: 'Independent Research Initiatives',
         description:
-            'Members develop individual projects and research tools. Each project is independently maintained, with shared visibility through the collective.',
+            'Members develop individual projects and research tools. Each project is independently maintained, with shared visibility through the collective',
         current: true,
     },
     {
         label: 'Phase 2',
         title: 'Shared Infrastructure Development',
         description:
-            'Useful tools and shared utilities may emerge from overlapping project needs; these remain member-driven and optional, reducing duplication where helpful.',
+            'Useful tools and shared utilities may emerge from overlapping project needs; these remain member-driven and optional, reducing duplication where helpful',
         current: false,
     },
     {
         label: 'Phase 3',
         title: 'Structured Research Teams',
         description:
-            'Formal research teams organize around specific domains (risk modeling, volatility analysis, systematic strategy research) with defined workflows and review processes.',
+            'Formal research teams organize around specific domains (risk modeling, volatility analysis, systematic strategy research) with defined workflows and review processes',
         current: false,
     },
 ];

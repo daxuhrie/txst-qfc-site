@@ -43,9 +43,9 @@ const overview = {
 }
 
 const projectHighlights = [
-    { title: "Dice Market Maker", detail: "Order flow, spreads, and impact with tunable parameters." },
-    { title: "Tiles Volatility", detail: "Streaks, clustering, and drawdown intuition via tile paths." },
-    { title: "Poker Bayes", detail: "Posterior updates, EV, and risk of ruin under uncertainty." },
+    { title: "Dice Market Maker", detail: "Order flow, spreads, and impact with tunable parameters" },
+    { title: "Tiles Volatility", detail: "Streaks, clustering, and drawdown intuition via tile paths" },
+    { title: "Poker Bayes", detail: "Posterior updates, EV, and risk of ruin under uncertainty" },
 ]
 
 const resources = [

@@ -34,19 +34,19 @@ export default function AboutPage() {
                         <ul className="text-slate-700 space-y-3">
                             <li>
                                 <strong>Structured Workshops</strong><br />
-                                Foundational and advanced topics in probability, market structure, volatility, and quantitative modeling.
+                                Foundational and advanced topics in probability, market structure, volatility, and quantitative modeling
                             </li>
                             <li>
                                 <strong>Simulation Design</strong><br />
-                                Interactive modules that reinforce intuition through implementation and iteration.
+                                Interactive modules that reinforce intuition through implementation and iteration
                             </li>
                             <li>
                                 <strong>Research &amp; Project Development</strong><br />
-                                Member-driven quantitative builds (individual or collaborative) that evolve into reusable tools and structured research.
+                                Member-driven quantitative builds (individual or collaborative) that evolve into reusable tools and structured research
                             </li>
                             <li>
                                 <strong>Open Contribution Model</strong><br />
-                                Students can build independently or in teams, contribute to shared repositories, and expand on existing modules.
+                                Students can build independently or in teams, contribute to shared repositories, and expand on existing modules
                             </li>
                         </ul>
                     </section>
@@ -57,25 +57,25 @@ export default function AboutPage() {
                             <ul className="text-slate-700 space-y-3">
                                 <li>
                                     <strong>Quantitative Frameworks</strong><br />
-                                    Deep intuition for probability, risk, and expected value.
+                                    Deep intuition for probability, risk, and expected value
                                 </li>
                                 <li>
                                     <strong>Market Understanding</strong><br />
-                                    Insight into liquidity, pricing mechanics, and volatility dynamics.
+                                    Insight into liquidity, pricing mechanics, and volatility dynamics
                                 </li>
                             </ul>
                             <ul className="text-slate-700 space-y-3">
                                 <li>
                                     <strong>Technical Experience</strong><br />
-                                    Exposure to simulation design, structured modeling, and research workflows.
+                                    Exposure to simulation design, structured modeling, and research workflows
                                 </li>
                                 <li>
                                     <strong>Interview &amp; Career Preparation</strong><br />
-                                    Applied problem-solving relevant to quantitative finance, trading, and data-driven roles.
+                                    Applied problem-solving relevant to quantitative finance, trading, and data-driven roles
                                 </li>
                                 <li>
                                     <strong>A Platform to Build</strong><br />
-                                    A space to develop original projects that can grow into research, portfolio pieces, or long-term initiatives.
+                                    A space to develop original projects that can grow into research, portfolio pieces, or long-term initiatives
                                 </li>
                             </ul>
                         </div>

@@ -5,19 +5,19 @@ const WhatWeDo: React.FC = () => {
     const offerings = [
         {
             title: 'Workshops',
-            description: 'Hands-on sessions covering quantitative finance topics, programming, and financial modeling techniques.',
+            description: 'Hands-on sessions covering quantitative finance topics, programming, and financial modeling techniques',
         },
         {
             title: 'Speaker Series',
-            description: 'Invited talks from industry professionals sharing insights on quantitative finance careers and trends.',
+            description: 'Invited talks from industry professionals sharing insights on quantitative finance careers and trends',
         },
         {
             title: 'Networking',
-            description: 'Events connecting members with alumni, recruiters, and other finance professionals.',
+            description: 'Events connecting members with alumni, recruiters, and other finance professionals',
         },
         {
             title: 'Member Projects Directory',
-            description: 'A curated showcase of independent member-developed projects and research initiatives.',
+            description: 'A curated showcase of independent member-developed projects and research initiatives',
         },
     ];
 

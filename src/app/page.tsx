@@ -173,9 +173,9 @@ export default function Home() {
             <div className="bg-slate-950/70 border border-slate-800 rounded-lg p-6">
               <p className="text-sm font-semibold text-white mb-3">First meeting prep</p>
               <ul className="text-sm text-white space-y-2">
-                <li>• Bring a laptop if possible.</li>
-                <li>• Expect a short primer followed by discussion.</li>
-                <li>• No finance background required; curiosity is enough.</li>
+                <li>• Bring a laptop if possible</li>
+                <li>• Expect a short primer followed by discussion</li>
+                <li>• No finance background required; curiosity is enough</li>
               </ul>
               <div className="mt-4">
                 <a href="mailto:ygv7@txstate.edu" className="btn-primary">Email the officers</a>
