@@ -18,7 +18,7 @@ describe('TextReveal', () => {
         const button = screen.getByRole('button', { name: /Replay Animation/i });
         expect(button).toBeInTheDocument();
         await userEvent.click(button);
-        // If click didn't throw, assume success — animation is visual.
+        // If click didn't throw, assume success; animation is visual.
         expect(button).toBeEnabled();
     });
 });

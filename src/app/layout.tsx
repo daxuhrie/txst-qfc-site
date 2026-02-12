@@ -9,6 +9,11 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Quant Finance Collective at Texas State University',
   description: 'A student-led quantitative finance education organization dedicated to developing market understanding through mathematics, programming, and data-driven analysis.',
+  icons: {
+    icon: '/qfc-logo.jpg',
+    shortcut: '/qfc-logo.jpg',
+    apple: '/qfc-logo.jpg',
+  },
 }
 
 export const viewport = 'width=device-width, initial-scale=1'
@@ -25,7 +30,7 @@ export default function RootLayout({
         <Navigation />
         <main id="content">{children}</main>
         <Footer />
-      </body> 
+      </body>
     </html>
   )
 }

@@ -1,12 +1,16 @@
-import React from 'react';
-import { HeroGeometric } from '@/components/ui/shape-landing-hero';
+import React from 'react'
+import { HeroGeometric } from '@/components/ui/shape-landing-hero'
 
-export default function DemoHeroPage() {
+export default function HeroPatternPage() {
     return (
-        <main className="min-h-screen">
-            {/* Client component will handle animations */}
+        <main className="min-h-screen bg-slate-950 text-slate-100">
             {/* @ts-ignore */}
-            <HeroGeometric badge="Demo" title1="Elevate Your" title2="Digital Vision" />
+            <HeroGeometric
+                badge="Quant Finance Collective"
+                title1="Student-led. Research-first."
+                title2="Quantitative initiatives at Texas State."
+                subtitle="This page renders the production hero pattern used across the site."
+            />
         </main>
-    );
+    )
 }

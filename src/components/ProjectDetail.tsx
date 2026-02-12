@@ -10,7 +10,7 @@ interface Simulation {
 interface ProjectDetailProps {
     title: string
     ownerName: string
-    status: 'Active' | 'Completed' | 'In Development'
+    status: 'Active' | 'Completed' | 'In Development' | 'Under Development'
     overview: string[]
     simulations: Simulation[]
     technicalFocus: string[]
@@ -19,7 +19,7 @@ interface ProjectDetailProps {
 
 const StatusBadge: React.FC<{ status: string }> = ({ status }) => {
     const classes =
-        status === 'Active'
+        (status === 'Active' || status === 'Under Development')
             ? 'bg-green-100 text-green-800'
             : status === 'Completed'
                 ? 'bg-primary-100 text-primary-800'
@@ -47,10 +47,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
                 <header className="mb-8">
                     <div className="flex flex-col md:flex-row items-start justify-between gap-4">
                         <div>
-                            <h1 id="project-title" className="text-2xl md:text-3xl font-semibold text-gray-900">
+                            <h1 id="project-title" className="text-2xl md:text-3xl font-semibold text-white">
                                 {title}
                             </h1>
-                            <p className="mt-2 text-sm text-gray-600">Developed and maintained independently by {ownerName}</p>
+                            <p className="mt-2 text-sm muted">Developed and maintained independently by {ownerName}</p>
                         </div>
                         <div className="flex items-center gap-3">
                             <StatusBadge status={status} />
@@ -76,15 +76,17 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
                 </section>
 
                 <section aria-labelledby="simulations-heading" className="mb-8">
-                    <h3 id="simulations-heading" className="text-lg font-semibold text-gray-900 mb-4">Featured Simulations</h3>
+                    <h3 id="simulations-heading" className="text-lg font-semibold text-white mb-3">Quantitative Simulations</h3>
+                    <p className="muted text-sm mb-4">These simulations are modules within {title} designed to build quantitative intuition and explore market dynamics.</p>
                     <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                         {simulations.map((sim) => (
                             <li key={sim.id} className="card p-4">
-                                <h4 className="text-sm font-semibold text-gray-900 mb-1">{sim.title}</h4>
-                                <p className="text-sm text-gray-600">{sim.description}</p>
+                                <h4 className="text-sm font-semibold text-white mb-1">{sim.title}</h4>
+                                <p className="text-sm muted">{sim.description}</p>
                             </li>
                         ))}
                     </ul>
+                    <p className="mt-4 text-xs muted">Modules are Under Development. Minor bugs may exist; feedback is welcome.</p>
                 </section>
 
                 <section aria-labelledby="technical-heading" className="mb-8">
@@ -98,7 +100,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
 
                 <aside role="note" className="mt-8 p-4 border-l-4 border-gray-300 bg-gray-50 rounded-md">
                     <p className="text-sm text-gray-700">
-                        <strong>Independence notice:</strong> Uhrie Risk Lab is an independent educational project developed and maintained by its author. It is listed here as an external resource and is not owned or operated by the Quant Finance Collective at Texas State University.
+                        <strong>Independence notice:</strong> {title} is an independent educational project developed and maintained by its author. It is listed here as an external resource and is not owned or operated by the Quant Finance Collective at Texas State University.
                     </p>
                 </aside>
             </div>

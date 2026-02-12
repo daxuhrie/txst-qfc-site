@@ -7,7 +7,7 @@ interface ProjectCardProps {
     ownerName: string;
     externalUrl: string;
     tags: string[];
-    status: 'Active' | 'Completed' | 'In Development';
+    status: 'Active' | 'Completed' | 'In Development' | 'Under Development';
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,11 +19,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     status,
 }) => {
     return (
-        <div className="card p-4 md:p-6 lg:p-8 h-full flex flex-col transition-shadow hover:shadow-md">
+        <div className="card p-4 md:p-6 lg:p-8 h-full flex flex-col transition-shadow hover:shadow-sm">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900 break-words leading-snug">{title}</h3>
                 <span
-                    className={`px-2 py-1 text-xs font-medium rounded-full ${status === 'Active'
+                    className={`inline-flex items-center justify-center text-center px-3 py-1 text-xs font-medium rounded-full ${(status === 'Active' || status === 'Under Development')
                         ? 'bg-green-100 text-green-800'
                         : status === 'Completed'
                             ? 'bg-primary-100 text-primary-800'
@@ -45,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 ))}
             </div>
             <p className="text-sm text-gray-500 mb-4 break-words">
-                External site — independently developed and maintained by {ownerName}
+                External site: independently developed and maintained by {ownerName}
             </p>
             <div className="mt-auto">
                 <a

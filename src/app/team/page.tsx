@@ -63,7 +63,7 @@ export default function TeamPage() {
                         Interested in joining the team or have questions? Reach out to our officers.
                     </p>
                     <p className="text-gray-700">
-                        Email: <a href="mailto:txstqfc@gmail.com" className="text-primary-600 hover:underline">txstqfc@gmail.com</a>
+                        Email: <a href="mailto:ygv7@txstate.edu" className="text-primary-600 hover:underline">ygv7@txstate.edu</a>
                     </p>
                 </div>
             </div>

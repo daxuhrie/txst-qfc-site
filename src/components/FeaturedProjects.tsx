@@ -18,13 +18,15 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ count = 3 }) => {
                 <div className="text-center mb-8 md:mb-12">
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Featured Projects</h2>
                     <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                        Discover projects developed by our members; external links open in a new tab.
+                        A curated selection of member-built projects. Each item credits its author and links to the original source; external links open in a new tab.
                     </p>
                 </div>
                 <div className="section-panel">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8">
+                    <div className="flex gap-6 flex-wrap justify-center mb-8">
                         {featuredProjects.map((project) => (
-                            <ProjectCard key={project.id} {...project} />
+                            <div key={project.id} className="w-full md:w-[48%] lg:w-[31%]">
+                                <ProjectCard {...project} />
+                            </div>
                         ))}
                     </div>
                     <div className="text-center">

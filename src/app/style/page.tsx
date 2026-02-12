@@ -26,9 +26,9 @@ export default function StylePage() {
                 <section className="mb-12">
                     <h2 className="text-xl font-semibold mb-4">Typography</h2>
                     <div className="prose">
-                        <h1>H1 — Headline</h1>
-                        <h2>H2 — Section</h2>
-                        <h3>H3 — Subsection</h3>
+                        <h1>H1: Headline</h1>
+                        <h2>H2: Section</h2>
+                        <h3>H3: Subsection</h3>
                         <p>Body copy should be legible with comfortable line-height and spacing.</p>
                     </div>
                 </section>
@@ -43,10 +43,10 @@ export default function StylePage() {
                 </section>
 
                 <section className="mt-12">
-                    <h2 className="text-xl font-semibold mb-4">Text Reveal (Demo)</h2>
+                    <h2 className="text-xl font-semibold mb-4">Text Reveal</h2>
                     <div className="max-w-3xl">
                         {/* @ts-ignore - Client component in server component */}
-                        <TextReveal word="Cinematic Reveal" />
+                        <TextReveal word="Quant Finance Collective" />
                     </div>
                 </section>
             </div>

@@ -31,7 +31,7 @@ const Resources: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {resources.map((resource, index) => (
-                        <div key={index} className="bg-white rounded-lg shadow-md p-4 md:p-6 hover:shadow-lg transition-shadow h-full flex flex-col">
+                        <div key={index} className="bg-white rounded-lg shadow-sm p-4 md:p-6 hover:shadow-sm transition-shadow h-full flex flex-col">
                             <div className="text-primary-600 mb-4">{resource.icon}</div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">{resource.title}</h3>
                             <p className="text-gray-600 mb-4">{resource.description}</p>

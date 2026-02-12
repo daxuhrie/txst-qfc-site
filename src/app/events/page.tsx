@@ -1,76 +1,98 @@
-export default function EventsPage() {
-    const events = [
-        {
-            title: 'Portfolio Optimization Workshop',
-            date: 'February 21, 2024',
-            time: '6:00 PM - 8:00 PM',
-            location: 'Business Building Room 201',
-            description: 'Learn modern portfolio theory and optimization techniques using Python.',
-            type: 'Workshop',
-        },
-        {
-            title: 'Industry Networking Night',
-            date: 'February 28, 2024',
-            time: '7:00 PM - 9:00 PM',
-            location: 'Student Center Ballroom',
-            description: 'Connect with finance professionals and alumni from leading firms.',
-            type: 'Networking',
-        },
-        {
-            title: 'Options Trading Seminar',
-            date: 'March 7, 2024',
-            time: '5:30 PM - 7:30 PM',
-            location: 'Business Building Room 301',
-            description: 'Introduction to options pricing models and trading strategies.',
-            type: 'Seminar',
-        },
-        {
-            title: 'Machine Learning in Finance',
-            date: 'March 14, 2024',
-            time: '6:00 PM - 8:00 PM',
-            location: 'Business Building Room 201',
-            description: 'Explore applications of machine learning in quantitative finance.',
-            type: 'Workshop',
-        },
-    ];
+const weekly = {
+    schedule: 'Every Thursday',
+    time: '5:00 – 6:00 PM',
+    location: 'Room 5242, Roy F. Mitte Building',
+}
 
+const semesterCalendar = [
+    { date: 'Thu Feb 12', time: '5–6 PM', topic: 'Inaugural meeting' },
+    { date: 'Thu Feb 19', time: '5–6 PM', topic: 'What is Quant?' },
+    { date: 'Thu Feb 27', time: '5–6 PM', topic: 'How Probabilities Work' },
+    { date: 'Thu Mar 5', time: '5–6 PM', topic: 'Poker Squares (Interactive Simulation)' },
+    { date: 'Thu Mar 12', time: '5–6 PM', topic: 'What is Volatility?' },
+    { date: 'Mar 15–22', time: '', topic: 'Spring Break (no meeting)' },
+    { date: 'Thu Mar 26', time: '5–6 PM', topic: 'Risk Tiles (Interactive Simulation)' },
+    { date: 'Thu Apr 2', time: '5–6 PM', topic: 'What is Market Making?' },
+    { date: 'Thu Apr 9', time: '5–6 PM', topic: 'Market Making (Interactive Simulation)' },
+    { date: 'Thu Apr 16', time: '5–6 PM', topic: 'Poker as Analogy for Trading' },
+    { date: 'Thu Apr 23', time: '5–6 PM', topic: 'Poker (Game)' },
+    { date: 'Thu Apr 30', time: '5–6 PM', topic: 'Interview Preparation' },
+]
+
+export default function EventsPage() {
     return (
         <div className="min-h-screen bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h1>
-                    <p className="text-lg text-gray-600">
-                        Join us for workshops, seminars, and networking opportunities to advance your quantitative finance knowledge.
-                    </p>
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+                <div className="text-center mb-10 space-y-3">
+                    <p className="text-xs uppercase tracking-[0.08em] text-slate-500">Events</p>
+                    <h1 className="text-3xl md:text-4xl font-semibold text-slate-900">Weekly Meetings and Semester Plan</h1>
+                    <p className="text-lg text-slate-700">Regular schedule with clear topics, simulations, and discussion.</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {events.map((event, index) => (
-                        <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
-                            <div className="flex justify-between items-start mb-4">
-                                <h3 className="text-xl font-semibold text-gray-900">{event.title}</h3>
-                                <span className="px-2 py-1 text-xs font-medium bg-primary-100 text-primary-800 rounded-full">
-                                    {event.type}
-                                </span>
-                            </div>
-                            <p className="text-gray-600 mb-4">{event.description}</p>
-                            <div className="space-y-2 text-sm text-gray-500">
-                                <p><strong>Date:</strong> {event.date}</p>
-                                <p><strong>Time:</strong> {event.time}</p>
-                                <p><strong>Location:</strong> {event.location}</p>
-                            </div>
-                            <button className="mt-4 w-full bg-primary-600 text-white py-2 px-4 rounded-md hover:bg-primary-700 transition-colors">
-                                RSVP
-                            </button>
+
+                <div className="grid gap-6 md:grid-cols-3 mb-10">
+                    <div className="card p-5">
+                        <p className="text-xs uppercase tracking-[0.08em] text-slate-500 mb-1">Meeting schedule</p>
+                        <h2 className="text-xl font-semibold text-slate-900">{weekly.schedule}</h2>
+                        <p className="text-sm text-slate-700">{weekly.time}</p>
+                        <p className="text-base text-slate-700">{weekly.location}</p>
+                    </div>
+
+                    <div className="card p-5 flex flex-col items-center justify-center gap-3">
+                        <p className="text-xs uppercase tracking-[0.08em] text-slate-500 mb-1">Stay updated</p>
+                        <p className="text-sm text-slate-700 mb-3">Join our community and follow updates</p>
+                        <div className="flex gap-3">
+                            <a href="https://discord.gg/eUSru8tggM" target="_blank" rel="noreferrer" className="btn-primary inline-flex items-center">Discord</a>
+                            <a href="https://www.instagram.com/qfctxst/" target="_blank" rel="noreferrer" className="btn-secondary inline-flex items-center">Instagram</a>
                         </div>
-                    ))}
+                    </div>
+
+                    <div className="card p-5">
+                        <p className="text-xs uppercase tracking-[0.08em] text-slate-500 mb-1">Upcoming sessions</p>
+                        <h2 className="text-xl font-semibold text-slate-900">Next Topics</h2>
+                        <ul className="text-sm text-slate-700 mt-3 space-y-1">
+                            {semesterCalendar.slice(0, 3).map((item) => (
+                                <li key={item.date}>
+                                    <span className="font-semibold">{item.date}</span>
+                                    {item.time && <span className="text-slate-500"> · {item.time}</span>}
+                                    {': '}
+                                    {item.topic}
+                                </li>
+                            ))}
+                        </ul>
+                        <a href="#topic-roadmap" className="inline-flex items-center text-sm text-[rgb(var(--accent-rgb))] mt-4">See full calendar →</a>
+                    </div>
                 </div>
-                <div className="mt-12 text-center">
-                    <p className="text-gray-600 mb-4">
-                        Want to stay updated on our events? Join our mailing list or follow us on social media.
-                    </p>
-                    <button className="bg-primary-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-primary-700 transition-colors">
-                        Join Mailing List
-                    </button>
+
+                <div className="section-panel">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+                        <div>
+                            <p className="text-xs uppercase tracking-[0.08em] text-slate-500">Spring semester calendar</p>
+                            <h2 id="topic-roadmap" className="text-xl font-semibold text-slate-900">Topic roadmap</h2>
+                        </div>
+                        <p className="text-sm text-slate-600">Subject to refinement as we add speakers and new simulations.</p>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-3">
+                        {semesterCalendar.map((item) => (
+                            <div key={item.date} className="border border-slate-100 rounded-lg bg-white px-4 py-3 flex justify-between gap-3">
+                                <div className="flex flex-col">
+                                    <span className="text-sm font-semibold text-slate-900">{item.date}</span>
+                                    {item.time && <span className="text-xs text-slate-500">{item.time}</span>}
+                                </div>
+                                <span className="text-sm text-slate-700 text-right">{item.topic}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="mt-10 grid gap-6 md:grid-cols-2">
+                    <div className="card p-5">
+                        <h3 className="text-lg font-semibold text-slate-900 mb-2">Past events</h3>
+                        <p className="text-sm text-slate-700">Catalog of past workshops and slides will be added after each session.</p>
+                    </div>
+                    <div className="card p-5">
+                        <h3 className="text-lg font-semibold text-slate-900 mb-2">Future events</h3>
+                        <p className="text-sm text-slate-700">Guest speakers and joint sessions are being scheduled; details will appear here.</p>
+                    </div>
                 </div>
             </div>
         </div>

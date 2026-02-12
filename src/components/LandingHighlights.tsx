@@ -16,7 +16,7 @@ const LandingHighlights: React.FC = () => {
 
                     <aside className="bg-white p-4 md:p-8 rounded-lg shadow-sm">
                         <h3 className="text-lg font-semibold text-gray-900 mb-2">Next Event</h3>
-                        <p className="text-gray-700 mb-4">Portfolio Optimization Workshop — Feb 21, 2024 • 6:00 PM</p>
+                        <p className="text-gray-700 mb-4">Portfolio Optimization Workshop: Feb 21, 2024 • 6:00 PM</p>
                         <Link href="/events" className="text-primary-600 hover:underline font-medium">See All Events</Link>
 
                         <hr className="my-6" />

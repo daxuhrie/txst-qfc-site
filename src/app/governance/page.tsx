@@ -37,7 +37,7 @@ export default function GovernancePage() {
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact</h2>
                         <p className="text-gray-700">
                             If you have questions about our governance model or want to submit a project for inclusion, please contact our officers at{' '}
-                            <a href="mailto:txstqfc@gmail.com" className="text-primary-600 hover:underline">txstqfc@gmail.com</a>.
+                            <a href="mailto:ygv7@txstate.edu" className="text-primary-600 hover:underline">ygv7@txstate.edu</a>.
                         </p>
                     </div>
                 </div>

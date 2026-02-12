@@ -1,6 +1,13 @@
-import React from 'react';
-import { HeroGeometric } from '@/components/ui/shape-landing-hero';
+import React from 'react'
+import { HeroGeometric } from '@/components/ui/shape-landing-hero'
 
-export default function DemoHeroGeometric() {
-    return <HeroGeometric badge="Kokonut UI" title1="Elevate Your" title2="Digital Vision" />;
+export default function HeroGeometricShowcase() {
+    return (
+        <HeroGeometric
+            badge="Quant Finance Collective"
+            title1="Student-led. Research-first."
+            title2="Quantitative initiatives at Texas State."
+            subtitle="A focused hero variant used across the site for programs, events, and recruitment."
+        />
+    )
 }

@@ -38,7 +38,7 @@ exports[`ProjectCard snapshots (responsive widths) renders correctly at 320px 1`
     <p
       class="text-sm text-gray-500 mb-4 break-words"
     >
-      External site — independently developed and maintained by 
+      External site: independently developed and maintained by 
       Jane Doe
     </p>
     <div
@@ -120,7 +120,7 @@ exports[`ProjectCard snapshots (responsive widths) renders correctly at 768px 1`
     <p
       class="text-sm text-gray-500 mb-4 break-words"
     >
-      External site — independently developed and maintained by 
+      External site: independently developed and maintained by 
       Jane Doe
     </p>
     <div
@@ -202,7 +202,7 @@ exports[`ProjectCard snapshots (responsive widths) renders correctly at 1200px 1
     <p
       class="text-sm text-gray-500 mb-4 break-words"
     >
-      External site — independently developed and maintained by 
+      External site: independently developed and maintained by 
       Jane Doe
     </p>
     <div
