@@ -19,10 +19,11 @@ function TabButton({
         <button
             type="button"
             onClick={() => onSelect(tab)}
+            aria-current={active ? 'true' : undefined}
             className={
                 active
-                    ? "relative overflow-hidden rounded-none border border-border bg-muted text-foreground py-2 px-3 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-primary first:rounded-s last:rounded-e"
-                    : "relative overflow-hidden rounded-none border border-border py-2 px-3 text-muted-foreground hover:bg-muted/40 first:rounded-s last:rounded-e"
+                    ? "relative overflow-hidden rounded-none border border-border bg-primary-600 text-white py-2 px-3 after:absolute after:inset-x-4 after:bottom-0 after:h-1 after:bg-white first:rounded-s last:rounded-e transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
+                    : "relative overflow-hidden rounded-none border border-border py-2 px-3 text-muted-foreground hover:bg-muted/40 first:rounded-s last:rounded-e transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-200"
             }
         >
             <span className="inline-flex items-center gap-2 text-sm font-medium">
