@@ -26,10 +26,10 @@ const Footer: React.FC = () => {
 
                     <div>
                         <p className="text-sm font-semibold mb-2">Contact</p>
-                        <a className="block text-sm opacity-90 hover:opacity-100 mb-1" href="mailto:ygv7@txstate.edu">ygv7@txstate.edu</a>
-                        <a className="block text-sm opacity-90 hover:opacity-100 mb-1" href="https://discord.gg/eUSru8tggM" target="_blank" rel="noreferrer">Discord</a>
-                        <a className="block text-sm opacity-90 hover:opacity-100 mb-1" href="https://www.instagram.com/qfctxst/" target="_blank" rel="noreferrer">Instagram</a>
-                        <a className="block text-sm opacity-90 hover:opacity-100" href="https://www.linkedin.com/company/qfc-at-txst/posts/?feedView=all" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a className="block text-sm opacity-90 hover:text-white mb-1" href="mailto:ygv7@txstate.edu">ygv7@txstate.edu</a>
+                        <a className="block text-sm opacity-90 hover:text-white mb-1" href="https://discord.gg/eUSru8tggM" target="_blank" rel="noreferrer">Discord</a>
+                        <a className="block text-sm opacity-90 hover:text-white mb-1" href="https://www.instagram.com/qfctxst/" target="_blank" rel="noreferrer">Instagram</a>
+                        <a className="block text-sm opacity-90 hover:text-white" href="https://www.linkedin.com/company/qfc-at-txst/posts/?feedView=all" target="_blank" rel="noreferrer">LinkedIn</a>
                     </div>
 
                     <div className="text-sm opacity-80">

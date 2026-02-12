@@ -18,14 +18,14 @@ export default function ContactPage() {
                     </div>
                     <div className="card p-5">
                         <p className="text-xs uppercase tracking-[0.08em] text-slate-500 mb-1">Discord</p>
-                        <h2 className="text-lg font-semibold text-slate-900"><a href="https://discord.gg/eUSru8tggM" target="_blank" rel="noreferrer" className="hover:text-primary-700">discord.gg/eUSru8tggM</a></h2>
+                        <h2 className="text-lg font-semibold text-slate-900"><a href="https://discord.gg/eUSru8tggM" target="_blank" rel="noreferrer" className="hover:text-white">discord.gg/eUSru8tggM</a></h2>
                         <p className="text-sm text-slate-700 mt-2">Join for announcements, files, and simulation feedback.</p>
                     </div>
                     <div className="card p-5">
                         <p className="text-xs uppercase tracking-[0.08em] text-slate-500 mb-1">Social</p>
                         <ul className="text-slate-800 text-sm space-y-1 mt-2">
-                            <li><a className="hover:text-primary-700" href="https://www.instagram.com/qfctxst/" target="_blank" rel="noreferrer">Instagram</a></li>
-                            <li><a className="hover:text-primary-700" href="https://www.linkedin.com/company/qfc-at-txst/posts/?feedView=all" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                            <li><a className="hover:text-white" href="https://www.instagram.com/qfctxst/" target="_blank" rel="noreferrer">Instagram</a></li>
+                            <li><a className="hover:text-white" href="https://www.linkedin.com/company/qfc-at-txst/posts/?feedView=all" target="_blank" rel="noreferrer">LinkedIn</a></li>
                         </ul>
                     </div>
                 </div>

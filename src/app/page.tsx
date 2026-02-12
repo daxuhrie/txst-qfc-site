@@ -176,13 +176,13 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-white mb-2">Attend, Connect, Contribute</h3>
               <p className="text-sm text-white mb-4">Attend weekly meetings, join our Discord, or reach out by email to contribute projects and simulations. We welcome students at all levels who are interested in building and learning.</p>
 
-              <div className="flex flex-wrap items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                 <a href="https://txst.campuslabs.com/engage/organization/ql_txst" target="_blank" rel="noreferrer" className="btn-primary inline-flex items-center">Join the Collective</a>
-                <a href="mailto:ygv7@txstate.edu" className="btn-secondary inline-flex items-center">Email us</a>
+                <a href="mailto:ygv7@txstate.edu" className="btn-secondary inline-flex items-center hover:text-white">Email us</a>
                 <a href="/projects" className="inline-flex items-center text-sm text-slate-300 hover:underline">View Projects →</a>
               </div>
 
-              <div className="mt-4 text-sm text-slate-200">
+                <div className="mt-4 text-sm text-slate-200">
                 <div>Room 5242, Roy F. Mitte Building</div>
                 <div>Thursdays • 5:00 – 6:00 PM</div>
               </div>
