@@ -164,7 +164,12 @@ a:not(.no-btn):hover {
     border: 1px solid rgba(var(--panel-border), 1);
   }
 
-  /* prevent text overflow without mid-word hyphenation */
+  /* prevent ALL mid-word hyphenation and word-breaking site-wide */
+  * {
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+  }
+
   p,
   li,
   h1,
@@ -174,10 +179,8 @@ a:not(.no-btn):hover {
   a,
   span,
   label {
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     word-break: normal;
-    -webkit-hyphens: none;
-    hyphens: none;
     color: rgb(var(--foreground-rgb));
   }
 
