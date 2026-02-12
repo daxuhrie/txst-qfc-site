@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
         <section className="site-section">
             <Container className="py-20 md:py-32 lg:py-40">
                 <div className="hero-panel max-w-4xl mx-auto text-center">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight">
                         Quant Finance Collective at Texas State University
                     </h1>
                     <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-8 max-w-3xl mx-auto">
