@@ -5,7 +5,7 @@ import Container from './Container'
 const Hero: React.FC = () => {
     return (
         <section className="site-section">
-            <Container className="py-12 md:py-20">
+            <Container className="py-20 md:py-32 lg:py-40">
                 <div className="hero-panel max-w-4xl mx-auto text-center">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight">
                         Quant Finance Collective at Texas State University
