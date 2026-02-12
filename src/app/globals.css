@@ -164,7 +164,7 @@ a:not(.no-btn):hover {
     border: 1px solid rgba(var(--panel-border), 1);
   }
 
-  /* prevent text overflow while avoiding excessive single-letter wrapping */
+  /* prevent text overflow without mid-word hyphenation */
   p,
   li,
   h1,
@@ -174,9 +174,10 @@ a:not(.no-btn):hover {
   a,
   span,
   label {
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     word-break: normal;
-    hyphens: auto;
+    -webkit-hyphens: none;
+    hyphens: none;
     color: rgb(var(--foreground-rgb));
   }
 
