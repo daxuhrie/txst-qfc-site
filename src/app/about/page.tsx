@@ -4,7 +4,7 @@ export default function AboutPage() {
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 space-y-8">
                 <div className="space-y-3">
                     <p className="text-xs uppercase tracking-[0.08em] text-slate-500">About</p>
-                    <h1 className="text-3xl md:text-4xl font-semibold text-slate-900">Quant Finance Collective</h1>
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900">Quant Finance Collective</h1>
                     <p className="text-lg text-slate-700 max-w-3xl">
                         The Quant Finance Collective is a student-led organization at Texas State University focused on developing rigorous quantitative thinkers. We study markets, uncertainty, and decision-making through mathematics, computation, and structured analysis.
                     </p>

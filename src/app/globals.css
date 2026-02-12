@@ -50,6 +50,8 @@ h4 {
   color: rgb(var(--foreground-rgb));
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 600;
+  -webkit-hyphens: none;
+  hyphens: none;
 }
 
 button,
