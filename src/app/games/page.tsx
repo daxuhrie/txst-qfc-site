@@ -61,6 +61,33 @@ function useSampleRun(label: string) {
     return { result, run }
 }
 
+function SimulationCardItem({ sim }: { sim: SimulationCard }) {
+    const { result, run } = useSampleRun(sim.id)
+
+    return (
+        <div className="card p-5 h-full flex flex-col">
+            <div className="space-y-1 mb-3">
+                <p className="text-xs text-slate-500">{sim.status}</p>
+                <h2 className="text-xl font-semibold text-slate-900">{sim.title}</h2>
+                <p className="text-sm text-slate-700">Concept: {sim.concept}</p>
+                <p className="text-sm text-slate-700">What it teaches: {sim.teaches}</p>
+            </div>
+            <p className="text-sm text-slate-700 mb-4 flex-1">{sim.note}</p>
+            <div className="space-y-2">
+                <button
+                    className="w-full rounded-md border border-primary-100 bg-white text-primary-800 font-semibold py-2 hover:bg-primary-50"
+                    onClick={run}
+                >
+                    Run quick sample
+                </button>
+                <div className="rounded-md border border-slate-100 bg-gray-50 px-3 py-2 text-sm text-slate-800 min-h-[48px] flex items-center">
+                    {result}
+                </div>
+            </div>
+        </div>
+    )
+}
+
 export default function GamesPage() {
     return (
         <div className="min-h-screen bg-gray-50">
@@ -74,31 +101,9 @@ export default function GamesPage() {
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-3">
-                    {simulations.map((sim) => {
-                        const { result, run } = useSampleRun(sim.id)
-                        return (
-                            <div key={sim.id} className="card p-5 h-full flex flex-col">
-                                <div className="space-y-1 mb-3">
-                                    <p className="text-xs text-slate-500">{sim.status}</p>
-                                    <h2 className="text-xl font-semibold text-slate-900">{sim.title}</h2>
-                                    <p className="text-sm text-slate-700">Concept: {sim.concept}</p>
-                                    <p className="text-sm text-slate-700">What it teaches: {sim.teaches}</p>
-                                </div>
-                                <p className="text-sm text-slate-700 mb-4 flex-1">{sim.note}</p>
-                                <div className="space-y-2">
-                                    <button
-                                        className="w-full rounded-md border border-primary-100 bg-white text-primary-800 font-semibold py-2 hover:bg-primary-50"
-                                        onClick={run}
-                                    >
-                                        Run quick sample
-                                    </button>
-                                    <div className="rounded-md border border-slate-100 bg-gray-50 px-3 py-2 text-sm text-slate-800 min-h-[48px] flex items-center">
-                                        {result}
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })}
+                    {simulations.map((sim) => (
+                        <SimulationCardItem key={sim.id} sim={sim} />
+                    ))}
                 </div>
             </Container>
         </div>

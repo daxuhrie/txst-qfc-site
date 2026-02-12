@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
@@ -24,7 +25,14 @@ const Navigation = () => {
                 <div className="flex justify-between h-20 md:h-24 items-center">
                     <Link href="/" className="flex items-center gap-3 text-white font-semibold leading-tight">
                         <div className="h-14 w-14 md:h-16 md:w-16 overflow-hidden rounded-lg border border-[#222222] bg-[#1a1a1a] flex items-center justify-center">
-                            <img src="/qfc-logo.jpg" alt="Quant Finance Collective" className="h-full w-full object-contain" />
+                            <Image
+                                src="/qfc-logo.jpg"
+                                alt="Quant Finance Collective"
+                                width={64}
+                                height={64}
+                                className="h-full w-full object-contain"
+                                priority
+                            />
                         </div>
                         <div className="flex flex-col">
                             <span className="inline sm:hidden text-base text-white">QFC at TXST</span>

@@ -8,7 +8,7 @@ export default function GovernancePage() {
                 <div className="bg-white p-8 rounded-lg shadow-sm">
                     <div className="prose prose-lg max-w-none">
                         <p className="text-gray-700 mb-6">
-                            The Quant Finance Collective at Texas State University is committed to maintaining clear boundaries between club activities and individual member projects. This page explains our approach to project ownership and the club's role in the community.
+                            The Quant Finance Collective at Texas State University is committed to maintaining clear boundaries between club activities and individual member projects. This page explains our approach to project ownership and the club&apos;s role in the community.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">Project Independence</h2>
@@ -16,7 +16,7 @@ export default function GovernancePage() {
                             All projects listed on this website are independently developed, owned, and maintained by their respective authors. The club does not claim ownership of any member-created code, research, or intellectual property. Each project remains the sole responsibility of its creator.
                         </p>
 
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">Club's Role</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4">Club&apos;s Role</h2>
                         <p className="text-gray-700 mb-6">
                             The Quant Finance Collective at Texas State University serves as a discovery and networking hub for quantitative finance enthusiasts. We provide a platform for members to showcase their work, connect with peers, and collaborate on ideas. However, we do not host, maintain, or endorse any specific projects.
                         </p>

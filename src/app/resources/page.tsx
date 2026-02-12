@@ -11,7 +11,7 @@ export default function ResourcesPage() {
 
                     <p className="text-xs uppercase tracking-[0.08em] text-slate-500">Resources</p>
                     <h1 className="text-3xl md:text-4xl font-semibold text-slate-900 mt-2">Under Construction</h1>
-                    <p className="text-lg text-slate-700 max-w-2xl mx-auto mt-4">We're curating educational materials, meeting artifacts, and structured handouts for QFC. The resources section is being assembled and will be published after upcoming meetings.</p>
+                    <p className="text-lg text-slate-700 max-w-2xl mx-auto mt-4">We&apos;re curating educational materials, meeting artifacts, and structured handouts for QFC. The resources section is being assembled and will be published after upcoming meetings.</p>
 
                     <div className="mt-8 grid gap-4 sm:grid-cols-3">
                         <div className="p-4 border border-slate-100 rounded-lg">
