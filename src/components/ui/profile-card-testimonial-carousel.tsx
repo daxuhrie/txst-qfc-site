@@ -90,7 +90,8 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
     return (
         <div className={cn("w-full max-w-5xl mx-auto px-4", className)}>
             {/* Desktop layout */}
-            <div className="hidden md:flex relative items-center">
+            {/* Fix height to match avatar so navigation bar doesn't shift when content changes */}
+            <div className="hidden md:flex relative items-center h-[470px]">
                 {/* Avatar */}
                 <div className="w-[470px] h-[470px] rounded-3xl overflow-hidden bg-gray-200 dark:bg-neutral-800 flex-shrink-0">
                     <AnimatePresence mode="wait">
@@ -116,7 +117,7 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
                 </div>
 
                 {/* Card */}
-                <div className="bg-white dark:bg-card rounded-3xl shadow-sm p-8 ml-[-80px] z-10 max-w-xl flex-1">
+                <div className="bg-white dark:bg-card rounded-3xl shadow-sm p-8 ml-[-80px] z-10 max-w-xl flex-1 h-full">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentTestimonial.name}
@@ -124,6 +125,7 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.4, ease: "easeInOut" }}
+                            className="h-full flex flex-col"
                         >
                             <div className="mb-6">
                                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
@@ -139,7 +141,7 @@ export function TestimonialCarousel({ className }: TestimonialCarouselProps) {
                                 {currentTestimonial.description}
                             </p>
 
-                            <div className="flex space-x-4">
+                            <div className="flex space-x-4 mt-auto">
                                 {socialIcons.map(({ icon: IconComponent, url, label }) => (
                                     <Link
                                         key={label}
