@@ -101,8 +101,8 @@ function LeaderModal({ leaders, index, onClose, onPrev, onNext }: { leaders: any
                     </div>
                 </div>
 
-                {/* Fixed-position navigation: keeps arrows and dots at the same vertical position relative to the viewport */}
-                <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 flex flex-col items-center gap-4">
+                {/* Navigation anchored to the modal card: bottom-right corner of the card */}
+                <div className="absolute right-6 bottom-6 z-30 flex flex-col items-center gap-4">
                     <div className="flex items-center gap-3">
                         <button onClick={onPrev} aria-label="Previous" className="p-3 rounded-full bg-white/5 hover:bg-white/10">
                             <ChevronLeft className="w-5 h-5" />
