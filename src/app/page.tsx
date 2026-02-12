@@ -111,22 +111,41 @@ export default function Home() {
 
             <div className="flex gap-6 flex-wrap justify-center">
               {featuredProjects.map((project) => (
-                <Link
-                  key={project.id}
-                  href={project.externalUrl || `/projects/${project.id}`}
-                  className="w-full md:w-[48%] lg:w-[31%] bg-slate-800 border border-slate-700 rounded-lg p-5 hover:shadow-lg transition-shadow flex flex-col h-full"
-                >
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <h3 className="text-base font-semibold text-white leading-snug">{project.title}</h3>
-                    <span className="inline-flex items-center justify-center text-center px-3 py-1 text-xs font-medium rounded-full bg-primary-100 text-primary-800">{project.status}</span>
-                  </div>
-                  <p className="text-sm text-slate-300 mb-4 flex-1">{project.description}</p>
+                project.status === 'Under Development' ? (
+                  <div
+                    key={project.id}
+                    className="w-full md:w-[48%] lg:w-[31%] bg-slate-800 border border-slate-700 rounded-lg p-5 transition-shadow flex flex-col h-full opacity-90 cursor-not-allowed"
+                    aria-disabled="true"
+                  >
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <h3 className="text-base font-semibold text-white leading-snug">{project.title}</h3>
+                      <span className="inline-flex items-center justify-center text-center px-3 py-1 text-xs font-medium rounded-full bg-primary-100 text-primary-800">{project.status}</span>
+                    </div>
+                    <p className="text-sm text-slate-300 mb-4 flex-1">{project.description}</p>
 
-                  <div className="mt-4 pt-3 border-t border-slate-700 flex items-center justify-between text-xs text-slate-400">
-                    <span>Owner: <span className="text-slate-200 font-medium">{project.ownerName}</span></span>
-                    <span className="text-[10px] uppercase tracking-wider">External</span>
+                    <div className="mt-4 pt-3 border-t border-slate-700 flex items-center justify-between text-xs text-slate-400">
+                      <span>Owner: <span className="text-slate-200 font-medium">{project.ownerName}</span></span>
+                      <span className="text-[10px] uppercase tracking-wider">External</span>
+                    </div>
                   </div>
-                </Link>
+                ) : (
+                  <Link
+                    key={project.id}
+                    href={project.externalUrl || `/projects/${project.id}`}
+                    className="w-full md:w-[48%] lg:w-[31%] bg-slate-800 border border-slate-700 rounded-lg p-5 hover:shadow-lg transition-shadow flex flex-col h-full"
+                  >
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <h3 className="text-base font-semibold text-white leading-snug">{project.title}</h3>
+                      <span className="inline-flex items-center justify-center text-center px-3 py-1 text-xs font-medium rounded-full bg-primary-100 text-primary-800">{project.status}</span>
+                    </div>
+                    <p className="text-sm text-slate-300 mb-4 flex-1">{project.description}</p>
+
+                    <div className="mt-4 pt-3 border-t border-slate-700 flex items-center justify-between text-xs text-slate-400">
+                      <span>Owner: <span className="text-slate-200 font-medium">{project.ownerName}</span></span>
+                      <span className="text-[10px] uppercase tracking-wider">External</span>
+                    </div>
+                  </Link>
+                )
               ))}
             </div>
           </div>

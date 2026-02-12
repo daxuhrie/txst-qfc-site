@@ -16,6 +16,7 @@ export const projects: Project[] = [
         ownerName: 'Dax Uhrie',
         externalUrl: 'https://risk-expedition.example.com',
         tags: ['Risk Management', 'Portfolio Optimization', 'Quantitative Analysis'],
-        status: 'Under Development',
+    // Keep set to 'Under Development' so UI can disable links and indicate status
+    status: 'Under Development',
     },
 ];

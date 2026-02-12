@@ -48,15 +48,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 External site: independently developed and maintained by {ownerName}
             </p>
             <div className="mt-auto">
-                <a
-                    href={externalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
-                >
-                    Visit Project
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
+                {status === 'Under Development' ? (
+                    <div
+                        role="button"
+                        aria-disabled="true"
+                        className="inline-flex items-center px-4 py-2 min-h-[44px] bg-slate-600/60 text-white rounded-md text-sm font-medium cursor-not-allowed opacity-80"
+                    >
+                        Under Development
+                    </div>
+                ) : (
+                    <a
+                        href={externalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
+                    >
+                        Visit Project
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                )}
             </div>
         </div>
     );
