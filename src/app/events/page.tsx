@@ -7,7 +7,7 @@ const weekly = {
 const semesterCalendar = [
     { date: 'Thu Feb 12', time: '5–6 PM', topic: 'Inaugural meeting' },
     { date: 'Thu Feb 19', time: '5–6 PM', topic: 'What is Quant?' },
-    { date: 'Thu Feb 27', time: '5–6 PM', topic: 'How Probabilities Work' },
+    { date: 'Thu Feb 26', time: '5–6 PM', topic: 'How Probabilities Work' },
     { date: 'Thu Mar 5', time: '5–6 PM', topic: 'Poker Squares (Interactive Simulation)' },
     { date: 'Thu Mar 12', time: '5–6 PM', topic: 'What is Volatility?' },
     { date: 'Mar 15–22', time: '', topic: 'Spring Break (no meeting)' },
