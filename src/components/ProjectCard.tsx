@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, FileText } from 'lucide-react';
 
 interface ProjectCardProps {
     title: string;
@@ -8,6 +8,7 @@ interface ProjectCardProps {
     externalUrl: string;
     tags: string[];
     status: 'Active' | 'Completed' | 'In Development' | 'Under Development';
+    paperUrl?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,6 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     externalUrl,
     tags,
     status,
+    paperUrl,
 }) => {
     return (
         <div className="card p-4 md:p-6 lg:p-8 h-full flex flex-col transition-shadow hover:shadow-sm">
@@ -47,8 +49,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <p className="text-sm text-gray-500 mb-4 break-words">
                 External site: independently developed and maintained by {ownerName}
             </p>
-            <div className="mt-auto">
-                {status === 'Under Development' ? (
+            <div className="mt-auto flex flex-wrap gap-3">
+                {paperUrl ? (
+                    <a
+                        href={paperUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
+                    >
+                        Read Paper
+                        <FileText className="ml-2 h-4 w-4" />
+                    </a>
+                ) : status === 'Under Development' ? (
                     <div
                         role="button"
                         aria-disabled="true"
