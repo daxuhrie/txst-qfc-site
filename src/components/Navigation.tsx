@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const links = [
     { href: '/', label: 'Home' },
@@ -16,13 +16,8 @@ const links = [
     { href: '/contact', label: 'Contact' },
 ]
 
-const toolsLinks = [
-    { href: '/tools/options', label: 'Options Greeks Dashboard' },
-]
-
 const Navigation = () => {
     const [open, setOpen] = useState(false)
-    const [toolsOpen, setToolsOpen] = useState(false)
 
     return (
         <nav className="sticky top-0 z-40 bg-[#111111]/96 border-b border-[#222222]">
@@ -55,38 +50,6 @@ const Navigation = () => {
                                 {link.label}
                             </Link>
                         ))}
-
-                        {/* Tools dropdown */}
-                        <div
-                            className="relative"
-                            onMouseEnter={() => setToolsOpen(true)}
-                            onMouseLeave={() => setToolsOpen(false)}
-                        >
-                            <button
-                                className="nav-link text-sm font-medium flex items-center gap-1"
-                                aria-expanded={toolsOpen}
-                                aria-haspopup="true"
-                            >
-                                Tools
-                                <ChevronDown
-                                    className={`h-3.5 w-3.5 transition-transform duration-150 ${toolsOpen ? 'rotate-180' : ''}`}
-                                />
-                            </button>
-                            {toolsOpen && (
-                                <div className="absolute top-full left-0 mt-2 w-56 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg shadow-xl py-1 z-50">
-                                    {toolsLinks.map(link => (
-                                        <Link
-                                            key={link.href}
-                                            href={link.href}
-                                            className="block px-4 py-2.5 text-sm text-[#ddd] hover:bg-[#222] hover:text-white transition-colors no-underline"
-                                            onClick={() => setToolsOpen(false)}
-                                        >
-                                            {link.label}
-                                        </Link>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
                     </div>
 
                     {/* Mobile hamburger */}
@@ -117,19 +80,6 @@ const Navigation = () => {
                                 {link.label}
                             </Link>
                         ))}
-                        <div className="pt-2 border-t border-[#222]">
-                            <p className="text-xs text-[#555] font-semibold tracking-wider uppercase mb-2 pt-1">Tools</p>
-                            {toolsLinks.map(link => (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    className="block py-2 font-medium nav-link"
-                                    onClick={() => setOpen(false)}
-                                >
-                                    {link.label}
-                                </Link>
-                            ))}
-                        </div>
                     </div>
                 </div>
             )}
