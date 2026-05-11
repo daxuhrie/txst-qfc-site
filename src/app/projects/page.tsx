@@ -7,7 +7,7 @@ export default function ProjectsPage() {
         <div className="min-h-screen bg-[#111111] text-white">
             <Container className="py-12 md:py-20">
                 <div className="text-center mb-8 md:mb-12">
-                    <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">Member Projects & Simulations</h1>
+                    <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">Research & Projects</h1>
                     <div className="grid gap-6 md:grid-cols-2 items-start max-w-4xl mx-auto">
                         <div>
                             <p className="text-base md:text-lg muted mb-4">QFC acts as a platform for member-built research and simulations. Projects may be developed independently or collaboratively. Strong contributions are reviewed and showcased to the collective.</p>
@@ -20,6 +20,7 @@ export default function ProjectsPage() {
                         </aside>
                     </div>
                 </div>
+                <p className="text-base text-gray-400 text-center mb-8">The following are research projects developed by QFC members. Each includes a full research report.</p>
                 <div className="flex gap-6 flex-wrap justify-center">
                     {projects.map((project) => (
                         <div key={project.id} className="w-full md:w-[48%] lg:w-[31%]">
